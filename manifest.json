@@ -1,0 +1,17 @@
+{
+  "name": "Jira Linkout",
+  "description": "Makes all links that leave jira open in a new window.",
+  "content_scripts": [{
+    "run_at": "document_end",
+    "matches": ["https://*.atlassian.net/*"],
+    "js": ["link_edit.js"]
+  }],
+  "icons": { 
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+   "128": "assets/icon128.png"
+  },
+  "manifest_version": 2,
+  "permissions": ["https://*.atlassian.net/*"],
+  "version": "0.0.2"
+}
